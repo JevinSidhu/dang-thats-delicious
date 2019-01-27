@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .inner
+        form.form(method="POST")
+            //posts to itself since there is no action (account/reset/:token)
+            h2 Reset Your Password
+            label(for="password") Password
+            input(type="password" name="password")
+            label(for="password-confirm") Confirmed Password
+            input(type="password" name="password-confirm")
+            input.button(type="submit" value="Reset Password")
